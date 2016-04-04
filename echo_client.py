@@ -31,7 +31,7 @@ def client(msg, log_buffer=sys.stderr):
         #
         #       Log each chunk you receive.  Use the print statement below to
         #       do it. This will help in debugging problems
-        #sock.settimeout(1000)
+        sock.settimeout(1000)
         while True:
             chunk = sock.recv(16)
             print('received "{0}"'.format(chunk.decode('utf8')), file=log_buffer)
